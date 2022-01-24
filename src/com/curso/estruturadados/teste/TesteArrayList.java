@@ -24,6 +24,7 @@ public class TesteArrayList {
 		System.out.println("O elemento da posição é: " + arrayList.get(2)); //igual metodo busca criado na classe vetor
 	
 		System.out.println("Tamanho do arrayList: " + arrayList.size());
+		
 	}
 
 }

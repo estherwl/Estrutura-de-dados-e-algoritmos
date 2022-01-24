@@ -13,7 +13,7 @@ public class Lista<T> {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
-	
+
 //	Solução menos recomendada:
 	public Lista(int capacidade, Class<T> tipoClasse) {
 		this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
@@ -62,6 +62,25 @@ public class Lista<T> {
 		}
 	}
 
+	public boolean contem(T elemento) {
+		for (int i = 0; i < this.tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				return true;
+			} 
+		}
+		return false;
+	}
+	
+	public int ultimoIndice(T elemento) {
+		int contador = -1;
+		for (int i = 0; i < this.tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				contador = i;
+			}
+		}
+		return contador;
+	}
+
 	public void remove(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
@@ -71,8 +90,25 @@ public class Lista<T> {
 		}
 		this.tamanho--;
 	}
+	
+	public void remove(T elemento) {
+		int posicao = busca(elemento);
+		if (posicao > -1) {
+			for (int i = posicao; i < this.tamanho - 1; i++) {
+				this.elementos[i] = this.elementos[i + 1];
+			}
+			this.tamanho--;
+		} 		
+	}
+	
+	public void limpar() {
+		this.tamanho = 0;	
+	}
+	
+	public T obtem(int posicao) {
+		return busca(posicao);
+	}
 
-	// Obtem elemento de uma posição
 	public T busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
@@ -80,7 +116,6 @@ public class Lista<T> {
 		return this.elementos[posicao];
 	}
 
-	// Verifica se elemento existe
 	public int busca(T elemento) {
 		for (int i = 0; i < this.tamanho; i++) {
 			if (this.elementos[i].equals(elemento)) {
