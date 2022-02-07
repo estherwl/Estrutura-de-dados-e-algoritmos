@@ -2,6 +2,8 @@ package com.curso.estruturadados.vetor;
 
 import java.lang.reflect.Array;
 
+import com.curso.estruturadados.teste.Contato;
+
 //generics impede erro que ocorria na classe VetorObjetos
 //T = type
 public class Lista<T> {

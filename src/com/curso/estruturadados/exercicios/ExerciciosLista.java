@@ -1,3 +1,10 @@
+//Melhorar a classe Lista, implementando os métodos:
+//contém, semelhante ao método contains da classe ArrayList
+//últimoIndice, semelhante ao método lastIndexOf da classe ArrayList
+//remove, onde um elemento da lista é passado como parâmetro e removido da lista
+//obtem, para obter um elemento dada uma posição do vetor
+//limpar, onde todos os elementos da lista são removidos
+
 package com.curso.estruturadados.exercicios;
 
 import com.curso.estruturadados.vetor.Lista;
