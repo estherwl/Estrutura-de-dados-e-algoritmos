@@ -31,5 +31,6 @@ public class Exercicio7Pilha {
 		}
 		
 		System.out.println(numeroBinario);
+		scan.close();
 	}
 }

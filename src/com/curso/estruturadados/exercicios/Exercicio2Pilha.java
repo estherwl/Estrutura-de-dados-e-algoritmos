@@ -44,7 +44,7 @@ public class Exercicio2Pilha {
 		}
 		
 		System.out.println("Pilhas desempilhadas: par " + par + " impar " + impar);
-
+		scan.close();
 	}
 
 }

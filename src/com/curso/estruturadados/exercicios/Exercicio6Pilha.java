@@ -19,6 +19,7 @@ public class Exercicio6Pilha {
 		String expressao = scan.next();
 		
 		System.out.println("Os parênteses estão corretos? " + verificaParenteses(expressao));
+		scan.close();
 
 	}
 
@@ -55,4 +56,5 @@ public class Exercicio6Pilha {
 
 		return true;
 	}
+	
 }

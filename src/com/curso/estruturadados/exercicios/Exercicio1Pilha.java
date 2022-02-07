@@ -36,7 +36,7 @@ public class Exercicio1Pilha {
 			pilha.desempilha();
 			
 		}
-
+		scan.close();
 	}
 
 }

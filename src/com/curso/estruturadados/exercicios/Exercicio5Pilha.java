@@ -34,6 +34,8 @@ public class Exercicio5Pilha {
 		} else {
 			System.out.println("Sequência não é um palíndromo");
 		}
+		
+		scan.close();
 	}
-
+	
 }
